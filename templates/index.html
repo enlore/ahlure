@@ -2,5 +2,27 @@
 {% block body %}
 <section id="content">
   <img src="/static/img/ahlure-logo_current.jpg">
+  <form action="" method="POST">
+      <ul>
+          <li>
+          <label for="contact-name"> Introduce yourself. </label>
+          </li>
+          <li>
+          <input type="text" name="contact-name"><br>
+          </li>
+          <li>
+          <label for="contact-email"> What's your email? </label>
+          </li>
+          <li>
+          <input type="email" name="contact-email"><br>
+          </li>
+          <li>
+          <label for="contact-blurb"> Tell me about your party! </label>
+          </li>
+          <li>
+          <textarea name="contact-blurb"></textarea><br>
+          </li>
+  </ul>
+  </form>
 </section>
 {% endblock %}
