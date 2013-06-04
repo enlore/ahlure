@@ -1,7 +1,10 @@
 from flask import Flask, render_template, request
+import smtplib
+from email.mime.text import MIMEText
 
 ERRLOG = '/tmp/ahlure.err.log'
 ADMINS = ['oneofy@gmail.com']
+CONTACTS = ['oneofy@gmail.com', 'alexander@waerealty.com']
 
 app = Flask(__name__)
 app.config.from_object(__name__)
@@ -39,7 +42,6 @@ def index():
         form = request.form
 
         rcpt = form['contact-email']
-        subj = '[ahlure.net CONTACT FORM]'
         msg = """
         Submission to ahlure.net:
         Name:  %s
@@ -47,8 +49,11 @@ def index():
         Message: 
         %s
         """ % (form['contact-name'], form['contact-phone'], form['contact-blurb'])
+        mime_msg = MIMEText(msg)
+        mime_msg['Subject'] = '[ahlure.net CONTACT FORM]'
+        smtp = smtplib.SMTP('127.0.0.1', 143)
+        smtp.sendmail('contact@ahlure.net', rcpt, mime_msg.as_string())
         return render_template('index.html', msg=msg)
-
     return render_template('index.html')
 
 if __name__ == '__main__':
