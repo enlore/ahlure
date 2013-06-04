@@ -92,11 +92,33 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+ul { list-style: none; }
+#content > img {
+    display: block;
+    width: 800px;
+    margin: 7em auto;
+}
 
+#content > form {
+    font-size: 26px;    
+    margin: 0 auto;
+    width: 29%;
+}
 
+#content > form ul {
+    padding: 0;
+}
 
+#content > form li label {
+    color: #555;
+    width: 100%;
+}
 
-
+#content > form li input,
+#content > form li textarea {
+    border-radius: 6px;
+    width: 100%;
+}
 
 
 
