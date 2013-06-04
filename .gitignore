@@ -2,3 +2,4 @@ logs
 files
 *.un~
 *.swp
+venv
