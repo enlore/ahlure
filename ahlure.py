@@ -7,6 +7,7 @@ app = Flask(__name__)
 app.config.from_object(__name__)
 app.config.from_envvar('AHLURE_SETTINGS', silent=True)
 
+# let's log stuff!
 if not app.debug:
     import logging
     from logging.handlers import SMTPHandler
@@ -31,6 +32,11 @@ if not app.debug:
     %(message)s
     '''))
 
-    if __name__ == '__main__':
-        app.debug = True
-        app.run()
+# routes
+@app.route('/', methods = ['GET'])
+def index():
+    return render_template('index.html')
+
+if __name__ == '__main__':
+    app.debug = True
+    app.run()
