@@ -35,7 +35,7 @@ if not app.debug:
 # routes
 @app.route('/', methods = ['GET', 'POST'])
 def index():
-    if requset.method == 'POST':
+    if request.method == 'POST':
         form = request.form
 
         rcpt = form['contact-email']
@@ -47,6 +47,7 @@ def index():
         Message: 
         %s
         """ % (form['contact-name'], form['contact-phone'], form['contact-blurb'])
+        return render_template('index.html', msg=msg)
 
     return render_template('index.html')
 

@@ -1,7 +1,12 @@
 {% extends "layout.html" %}
 {% block body %}
 <section id="content">
-  <img src="/static/img/ahlure-logo_current.jpg">
+<a href="http://ahlure.net"><img src="/static/img/ahlure-logo_current.jpg"></a>
+  {% if msg %}
+    <pre>
+        {{ msg }}
+    </pre>
+  {% endif %}
   <form action="" method="POST">
       <ul>
           <li>
@@ -14,7 +19,7 @@
           <label for="contact-phone"> What's your phone number? </label>
           </li>
           <li>
-          <input type="email" name="contact-phone"><br>
+          <input type="text" name="contact-phone"><br>
           </li>
           <li>
           <label for="contact-email"> What's your email? </label>
