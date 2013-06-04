@@ -120,6 +120,16 @@ ul { list-style: none; }
     width: 100%;
 }
 
+#content > form input[type="submit"] {
+   background: #B65EED;
+   border: none;
+   display: block;
+    float: right;
+   height: 2em;
+   margin-top: 1em;
+   width: 33%;
+}
+
 
 
 
