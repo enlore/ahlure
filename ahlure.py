@@ -14,6 +14,15 @@ if not app.debug:
     from logging.handlers import SMTPHandler
     from logging import Formatter, FileHandler
 
+    # for files!
+    fh = FileHandler(app.config['ERRLOG'])
+    fh.setFormatter(Formatter('''
+    '%(asctime)s %(levelname)s: %(message)s '
+        '[in %(pathname)s:%(lineno)d]'
+        '''))
+    app.logger.addHandler(fh)
+
+    # for emails yes!
     serv = '127.0.0.1'
     who = 'ahlure@chilidog.rokitpowered.net'
     whom = ADMINS
