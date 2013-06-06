@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 
 ERRLOG = '/tmp/ahlure.err.log'
 ADMINS = ['oneofy@gmail.com']
+CONTACTS = ['oneofy@gmail.com']
 
 app = Flask(__name__)
 app.config.from_object(__name__)
@@ -32,6 +33,20 @@ if not app.debug:
     %(message)s
     '''))
 
+# helpers
+def send_mail(msg, rcpt):
+    import smtplib
+    from email.mime.text import MIMEText
+
+    login = None
+    password = None
+    mime_msg = msg
+    mime_msg['Subject'] = '[ CONTACT FORM @ ahlure.net ]'
+
+    smtp = smtplib.SMTP('localhost', 143)
+    smtp.sendmail('ahlure@chilidog.rokitpowered.net', rcpt, mime_msg.as_string())
+    smtp.quit()
+
 # routes
 @app.route('/', methods = ['GET', 'POST'])
 def index():
@@ -47,6 +62,8 @@ def index():
         Message: 
         %s
         """ % (form['contact-name'], form['contact-phone'], form['contact-blurb'])
+
+        send_mail(msg,CONTACTS)
         return render_template('index.html', msg=msg)
 
     return render_template('index.html')
