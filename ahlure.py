@@ -49,7 +49,7 @@ def send_mail(msg, rcpt):
 
     login = None
     password = None
-    mime_msg = msg
+    mime_msg = MIMEText(msg)
     mime_msg[u'Subject'] = u'[ CONTACT FORM @ ahlure.net ]'
 
     smtp = smtplib.SMTP(u'localhost', 143)
