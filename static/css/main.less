@@ -97,7 +97,7 @@ ul {
 }
 
 #content {
-  padding-bottom: 2em;
+  padding-bottom: 6em;
 }
 
 #content > a img {
@@ -106,6 +106,14 @@ ul {
     min-width: 300px;
     width: 100%;
     margin: 7em auto;
+}
+
+#content > p, 
+#content > p + p,
+#content > h1,
+#content > h2 {
+    width: 90%;
+    margin: 0 auto;
 }
 
 #content > form {
@@ -140,6 +148,18 @@ ul {
 
 @media only screen and (min-width: 54em) {
     /* Style adjustments for viewports that meet the condition */
+    #content > h1,
+    #content > h2 {
+      text-align: center;
+    }
+
+    #content > p, 
+    #content > p + p,
+    #content > h1,
+    #content > h2 {
+      width: 50%;
+    }
+
     #content > form {
         width: 50%; 
     }
