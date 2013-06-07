@@ -3,6 +3,8 @@ from flask import Flask, render_template, request
 ERRLOG = u'/tmp/ahlure.err.log'
 ADMINS = [u'oneofy@gmail.com']
 CONTACTS = [u'oneofy@gmail.com']
+GMAIL_ACCOUNT = None
+GMAIL_PASS = None
 
 app = Flask(__name__)
 app.config.from_object(__name__)
@@ -56,8 +58,8 @@ def send_mail(msg, rcpt):
     smtp.ehlo()
     smtp.starttls()
     smtp.ehlo()
-    smtp.login(u'contact.ahlure@gmail.com', u'a93&v#h%d836f')
-    smtp.sendmail(u'contact.ahlure@gmail.com', rcpt, mime_msg.as_string())
+    smtp.login(GMAIL_ACCOUNT, GMAIL_PASS)
+    smtp.sendmail(GMAIL_ACCOUNT, rcpt, mime_msg.as_string())
     smtp.quit()
 
 # routes
