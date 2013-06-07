@@ -52,8 +52,12 @@ def send_mail(msg, rcpt):
     mime_msg = MIMEText(msg)
     mime_msg[u'Subject'] = u'[ CONTACT FORM @ ahlure.net ]'
 
-    smtp = smtplib.SMTP(u'localhost', 143)
-    smtp.sendmail(u'ahlure@chilidog.rokitpowered.net', rcpt, mime_msg.as_string())
+    smtp = smtplib.SMTP(u'smtp.gmail.com', 587)
+    smtp.ehlo()
+    smtp.starttls()
+    smtp.ehlo()
+    smtp.login(u'contact.ahlure@gmail.com', u'a93&v#h%d836f')
+    smtp.sendmail(u'contact.ahlure@gmail.com', rcpt, mime_msg.as_string())
     smtp.quit()
 
 # routes
