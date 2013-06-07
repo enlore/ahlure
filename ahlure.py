@@ -53,13 +53,16 @@ def send_mail(msg, rcpt):
     password = None
     mime_msg = MIMEText(msg)
     mime_msg[u'Subject'] = u'[ CONTACT FORM @ ahlure.net ]'
+    mime_msg[u'From'] = u'contact.ahlure@gmail.com'
+    mime_msg[u'Reply-To'] = u'noreply'
+    mime_msg[u'To'] = CONTACTS
 
     smtp = smtplib.SMTP(u'smtp.gmail.com', 587)
     smtp.ehlo()
     smtp.starttls()
     smtp.ehlo()
-    smtp.login(GMAIL_ACCOUNT, GMAIL_PASS)
-    smtp.sendmail(GMAIL_ACCOUNT, rcpt, mime_msg.as_string())
+    smtp.login(app.config['GMAIL_ACCOUNT'], app.config['GMAIL_PASS'])
+    smtp.sendmail(app.config['GMAIL_ACCOUNT'], rcpt, mime_msg.as_string())
     smtp.quit()
 
 # routes
