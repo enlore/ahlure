@@ -56,6 +56,10 @@ def index():
         return render_template('index.html', msg=msg)
     return render_template('index.html')
 
+@app.route('/google1f5182fb6bdd5d62.html', methods=['GET'])
+def gwmt():
+    return render_template('google1f5182fb6bdd5d62.html')
+
 if __name__ == '__main__':
     app.debug = True
     app.run()
