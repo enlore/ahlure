@@ -1,12 +1,16 @@
-{% extends "layout.html" %}
-{% block body %}
+{% extends "layout.html" %} {% block body %}
 <section id="content">
-<a href="http://ahlure.net"><img src="/static/img/ahlure-logo_current.jpg"></a>
+<a href="http://ahlure.net"><img src="/static/img/ahlure-logo_current.jpg" alt="Clarksville DJ - Ahlure"></a>
+<h1> Ahlure </h1>
+<h2> Clarksville's Own Professional DJ and Party Planner </h2>
+<p> Hey Clarksville! My name is Ahlure, and I want to plan your next party!  I'm a professional DJ and party planner with a high quality system and excellent taste. Message me here or give me a call! </p>
+<h1>931 624 2120</h1>
   {% if msg %}
     <pre>
         {{ msg }}
     </pre>
   {% endif %}
+  
   <form action="" method="POST">
       <ul>
           <li>

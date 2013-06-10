@@ -3,3 +3,6 @@ files
 *.un~
 *.swp
 venv
+ahlure_keywords
+party_dj_wedding_birthday.csv
+conf.py
