@@ -7,6 +7,7 @@ ADMINS = [u'oneofy@gmail.com']
 CONTACTS = [u'oneofy@gmail.com']
 GMAIL_ACCOUNT = None
 GMAIL_PASS = None
+PORT = 9002
 
 app = Flask(__name__)
 app.config.from_object(__name__)
@@ -95,4 +96,4 @@ def gwmt():
 
 if __name__ == '__main__':
     app.debug = True
-    app.run(app.config['PORT'])
+    app.run(port=app.config['PORT'])
