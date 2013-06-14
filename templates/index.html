@@ -1,46 +1,77 @@
-{% extends "layout.html" %} {% block body %}
-<section id="content">
-<a href="http://ahlure.net"><img src="/static/img/ahlure-logo_current.jpg" alt="Clarksville DJ - Ahlure"></a>
-<h1> Ahlure </h1>
-<h2> Clarksville's Own Professional DJ and Party Planner </h2>
-<p> Hey Clarksville! My name is Ahlure, and I want to plan your next party!  I'm a professional DJ and party planner with a high quality system and excellent taste. Message me here or give me a call! </p>
-<h1>931 624 2120</h1>
-  {% if msg %}
-    <pre>
-        {{ msg }}
-    </pre>
-  {% endif %}
-  
-  <form action="" method="POST">
-      <ul>
-          <li>
-          <label for="contact-name"> Introduce yourself. </label>
-          </li>
-          <li>
-          <input type="text" name="contact-name"><br>
-          </li>
-          <li>
-          <label for="contact-phone"> What's your phone number? </label>
-          </li>
-          <li>
-          <input type="text" name="contact-phone"><br>
-          </li>
-          <li>
-          <label for="contact-email"> What's your email? </label>
-          </li>
-          <li>
-          <input type="email" name="contact-email"><br>
-          </li>
-          <li>
-          <label for="contact-blurb"> Tell me about your party! </label>
-          </li>
-          <li>
-          <textarea name="contact-blurb"></textarea><br>
-          </li>
-          <li>
-          <input type="submit" value="Message Me">
-          </li>
-  </ul>
-  </form>
-</section>
+{% extends "layout.html" %}
+{% block body %}
+<div id="wrapper">
+    <section class="active">
+    <h2> Section 1 </h2>
+    <p>
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt
+    turpis condimentum, ultricies lorem eget, blandit risus. Praesent eleifend
+    tincidunt ipsum, eu mattis libero congue quis. Praesent faucibus, lorem eget
+    porttitor tristique, augue lacus pulvinar justo, ac ultricies tellus justo nec
+    ipsum. Quisque pharetra feugiat eros, nec mattis tellus semper ut. Integer
+    tincidunt aliquet tristique. Mauris quis felis sed lacus gravida posuere eget
+    in risus. Vestibulum in nisi ac risus ultricies aliquet sit amet vel eros.
+    Integer vehicula at felis ut pharetra.  </p>
+
+    <p>
+    Proin ullamcorper urna vitae lorem dapibus euismod. Etiam ultrices in eros
+    lobortis iaculis. Cras commodo gravida turpis vitae tempor. Nullam et turpis
+    tempor velit dignissim varius sed a tellus. Vivamus tristique mi sed nunc
+    condimentum tempus quis at nisl. Donec vitae placerat arcu. Aliquam sed orci eu
+    orci imperdiet pharetra sagittis ut velit. Vestibulum ultricies commodo mi, in
+    viverra neque rhoncus ac. Suspendisse vel urna nulla. Fusce tincidunt ante
+    nisi, at laoreet erat consequat at.
+    </p>
+    </section>
+
+    <section class="hidden">
+    <h2> Section 2 </h2>
+    <p>
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt
+    turpis condimentum, ultricies lorem eget, blandit risus. Praesent eleifend
+    tincidunt ipsum, eu mattis libero congue quis. Praesent faucibus, lorem eget
+    porttitor tristique, augue lacus pulvinar justo, ac ultricies tellus justo nec
+    ipsum. Quisque pharetra feugiat eros, nec mattis tellus semper ut. Integer
+    tincidunt aliquet tristique. Mauris quis felis sed lacus gravida posuere eget
+    in risus. Vestibulum in nisi ac risus ultricies aliquet sit amet vel eros.
+    Integer vehicula at felis ut pharetra.  </p>
+
+    <p>
+    Proin ullamcorper urna vitae lorem dapibus euismod. Etiam ultrices in eros
+    lobortis iaculis. Cras commodo gravida turpis vitae tempor. Nullam et turpis
+    tempor velit dignissim varius sed a tellus. Vivamus tristique mi sed nunc
+    condimentum tempus quis at nisl. Donec vitae placerat arcu. Aliquam sed orci eu
+    orci imperdiet pharetra sagittis ut velit. Vestibulum ultricies commodo mi, in
+    viverra neque rhoncus ac. Suspendisse vel urna nulla. Fusce tincidunt ante
+    nisi, at laoreet erat consequat at.
+    </p>
+
+    </section>
+
+    <section class="hidden">
+    <h2> Section 3 </h2>
+    <p>
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt
+    turpis condimentum, ultricies lorem eget, blandit risus. Praesent eleifend
+    tincidunt ipsum, eu mattis libero congue quis. Praesent faucibus, lorem eget
+    porttitor tristique, augue lacus pulvinar justo, ac ultricies tellus justo nec
+    ipsum. Quisque pharetra feugiat eros, nec mattis tellus semper ut. Integer
+    tincidunt aliquet tristique. Mauris quis felis sed lacus gravida posuere eget
+    in risus. Vestibulum in nisi ac risus ultricies aliquet sit amet vel eros.
+    Integer vehicula at felis ut pharetra.  </p>
+
+    <p>
+    Proin ullamcorper urna vitae lorem dapibus euismod. Etiam ultrices in eros
+    lobortis iaculis. Cras commodo gravida turpis vitae tempor. Nullam et turpis
+    tempor velit dignissim varius sed a tellus. Vivamus tristique mi sed nunc
+    condimentum tempus quis at nisl. Donec vitae placerat arcu. Aliquam sed orci eu
+    orci imperdiet pharetra sagittis ut velit. Vestibulum ultricies commodo mi, in
+    viverra neque rhoncus ac. Suspendisse vel urna nulla. Fusce tincidunt ante
+    nisi, at laoreet erat consequat at.
+    </p>
+    </section>
+</div>
 {% endblock %}
