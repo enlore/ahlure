@@ -101,9 +101,52 @@ section.active {
 }
 
 section.hidden {
-    display: none;
+}
+
+#wrapper {
+    padding: 3px;
+    border: 3px solid black;
+}
+
+section > h2 {
+    background: #000;
+    color: #fff;
+    padding: 3px;
 }
 
 @media only screen and (min-width: 54em) {
+    section > h2 {
+        width: 10em;
+    }
+
+    section.hidden {
+        display: none;
+    }
+
+    #wrapper {
+        margin: 10em auto;
+        width: 62em;
+    }
+
+    #wrapper > section {
+        border-top: 3px solid black;
+        clear: both;
+    }
+
+    #wrapper nav ul li {
+        background: #000;
+        float: left; 
+        margin-right: 20px;
+        overflow: hidden;
+        width: 10em;
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+        h2 { 
+            margin: 0;
+            padding: 5px;
+        }
+    }
 }
 
