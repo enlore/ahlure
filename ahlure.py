@@ -7,11 +7,12 @@ ADMINS = [u'oneofy@gmail.com']
 CONTACTS = [u'oneofy@gmail.com']
 GMAIL_ACCOUNT = None
 GMAIL_PASS = None
-PORT = 9002
+PORT = 5000
+HOST = 'localhost'
 
 app = Flask(__name__)
 app.config.from_object(__name__)
-app.config.from_envvar(u'AHLURE_SETTINGS', silent=True)
+app.config.from_envvar('APPCONFIG', silent=False)
 
 # let's log stuff!
 if not app.debug:
@@ -96,4 +97,4 @@ def gwmt():
 
 if __name__ == '__main__':
     app.debug = True
-    app.run(port=app.config['PORT'])
+    app.run(host=app.config['HOST'], port=app.config['PORT'])
