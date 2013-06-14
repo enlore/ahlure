@@ -96,76 +96,14 @@ ul {
     list-style: none; 
 }
 
-#content {
-  padding-bottom: 6em;
-}
-
-#content > a img {
+section.active {
     display: block;
-    max-width: 800px;
-    min-width: 300px;
-    width: 100%;
-    margin: 7em auto;
 }
 
-#content > p, 
-#content > p + p,
-#content > h1,
-#content > h2 {
-    width: 90%;
-    margin: 0 auto;
-}
-
-#content > form {
-    font-size: 26px;    
-    margin: 0 auto;
-    padding: 4px;
-    width: 90%;
-}
-
-#content > form ul {
-    padding: 0;
-}
-
-#content > form li label {
-    color: #555;
-}
-
-#content > form li input,
-#content > form li textarea {
-    border-radius: 6px;
-    width: 100%;
-}
-
-#content > form input[type="submit"] {
-   background: #B65EED;
-   border: none;
-   display: block;
-   float: right;
-   height: 2em;
-   margin-top: 1em;
+section.hidden {
+    display: none;
 }
 
 @media only screen and (min-width: 54em) {
-    /* Style adjustments for viewports that meet the condition */
-    #content > h1,
-    #content > h2 {
-      text-align: center;
-    }
-
-    #content > p, 
-    #content > p + p,
-    #content > h1,
-    #content > h2 {
-      width: 50%;
-    }
-
-    #content > form {
-        width: 50%; 
-    }
-
-    #content > form input[type="submit"] {
-        width: 12em;
-    }
 }
 
