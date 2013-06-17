@@ -116,22 +116,31 @@ section > h2 {
 }
 
 @media only screen and (min-width: 54em) {
-    section > h2 {
-        width: 10em;
+    /* logo */
+    #logo-wrapper {
+        margin: 0 auto;
+        padding-bottom: 1em;
+        width: 80%;
     }
 
-    section.hidden {
-        display: none;
-    }
-
+    /* content */
     #wrapper {
-        margin: 10em auto;
+        margin: 0 auto;
         width: 62em;
+    }
+    
+    #wrapper > section > h2 {
+        width: 10em;
     }
 
     #wrapper > section {
         border-top: 3px solid black;
         clear: both;
+        display: none;
+    }
+
+    #wrapper > section.active {
+        display: block;
     }
 
     #wrapper nav ul li {
