@@ -9,6 +9,9 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
+body * {
+    box-sizing: border-box;
+}
 
 html,
 button,
@@ -94,6 +97,12 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+/* the pallete */
+@blue: #D9EDEE;
+@red: #CD3824;
+@yellow: #F8F499;
+@green: #6A9B32;
+
 ul { 
     list-style: none; 
 }
@@ -158,25 +167,47 @@ section > h2 {
     }
 
     #wrapper nav ul li.active.blue {
-        background: #D9EDEE;
+        background: @blue;
     }
 
     #wrapper nav ul li.active.red {
-        background: #CD3824;
+        background: @red;
     }
 
     #wrapper nav ul li.active.yellow {
-        background: #F8F499;
+        background: @yellow;
     }
 
     #wrapper nav ul li.active.green {
-        background: #6A9B32;
+        background: @green;
     }
     
     #inner-wrapper > section {
+        border-right: solid 60px black;
+        border-bottom: solid 60px black;
         clear: both;
         display: none;
         min-height: 30em;
+    }
+
+    #inner-wrapper > section.active.blue {
+        border-right: solid 60px @blue;
+        border-bottom: solid 60px @blue;
+    }
+
+    #inner-wrapper > section.active.red {
+        border-right: solid 60px @red;
+        border-bottom: solid 60px @red;
+    }
+
+    #inner-wrapper > section.active.yellow {
+        border-right: solid 60px @yellow;
+        border-bottom: solid 60px @yellow;
+    }
+
+    #inner-wrapper > section.active.green {
+        border-right: solid 60px @green;
+        border-bottom: solid 60px @green;
     }
 
     #inner-wrapper > section > h2 {
