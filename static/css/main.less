@@ -108,7 +108,10 @@ section.hidden {
 
 #wrapper {
     padding: 3px;
-    border: 3px solid black;
+}
+
+#inner-wrapper > section {
+    border: solid 3px black;
 }
 
 section > h2 {
@@ -120,8 +123,8 @@ section > h2 {
 @media only screen and (min-width: 54em) {
     /* bg */
     body {
-        background: url('/static/img/bg-circle.png') 0 0 no-repeat;
-        min-width: 1068px;
+        background: url('/static/img/bg-circle.png') no-repeat;
+        background-size: ;
     }
 
     /* logo */
@@ -136,20 +139,6 @@ section > h2 {
         background: #fff;
         margin: 0 auto;
         width: 62em;
-    }
-    
-    #wrapper > section {
-        border-top: 3px solid black;
-        clear: both;
-        display: none;
-    }
-
-    #wrapper > section > h2 {
-        width: 10em;
-    }
-
-    #wrapper > section.active {
-        display: block;
     }
 
     #wrapper nav ul li {
@@ -166,6 +155,19 @@ section > h2 {
             margin: 0;
             padding: 5px;
         }
+    }
+    
+    #inner-wrapper > section {
+        clear: both;
+        display: none;
+    }
+
+    #inner-wrapper > section > h2 {
+        width: 10em;
+    }
+
+    #inner-wrapper > section.active {
+        display: block;
     }
 }
 
