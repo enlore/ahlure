@@ -21,6 +21,8 @@ textarea {
 body {
     font-size: 1em;
     line-height: 1.4;
+    padding: 0;
+    margin: 0;
 }
 
 /*
@@ -116,6 +118,12 @@ section > h2 {
 }
 
 @media only screen and (min-width: 54em) {
+    /* bg */
+    body {
+        background: url('/static/img/bg-circle.png') 0 0 no-repeat;
+        min-width: 1068px;
+    }
+
     /* logo */
     #logo-wrapper {
         margin: 0 auto;
@@ -125,18 +133,19 @@ section > h2 {
 
     /* content */
     #wrapper {
+        background: #fff;
         margin: 0 auto;
         width: 62em;
     }
     
-    #wrapper > section > h2 {
-        width: 10em;
-    }
-
     #wrapper > section {
         border-top: 3px solid black;
         clear: both;
         display: none;
+    }
+
+    #wrapper > section > h2 {
+        width: 10em;
     }
 
     #wrapper > section.active {
