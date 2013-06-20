@@ -144,6 +144,10 @@ section > h2 {
         width: 80%;
     }
 
+    #logo-wrapper img {
+    width: 800px;
+    }
+
     /* content */
     #wrapper {
         background: #fff;
@@ -161,7 +165,7 @@ section > h2 {
             color: #fff;
             text-decoration: none;
         }
-        h2 { 
+        h2 {
             margin: 0;
             padding: 5px;
         }
@@ -182,16 +186,18 @@ section > h2 {
     #wrapper nav ul li.active.green {
         background: @green;
     }
-    
+
     #inner-wrapper > section {
-        border-right: solid 60px black;
-        border-bottom: solid 60px black;
+        border-right: solid 60px #000;
+        border-bottom: solid 60px #000;
         clear: both;
         display: none;
         min-height: 30em;
     }
 
     #inner-wrapper > section.active.blue {
+    border-top: 3px solid @blue;
+    border-left: 3px solid @blue;
         border-right: solid 60px @blue;
         border-bottom: solid 60px @blue;
     }
@@ -218,6 +224,4 @@ section > h2 {
     #inner-wrapper > section.active {
         display: block;
     }
-
 }
-
