@@ -2,17 +2,18 @@ body * {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    font-size: 18px; }
+    font-size: 18px;
+}
 
 body {
-    background: #888;
+    background: #222;
 }
 
 
 @media screen and (min-width: 48em) {
     .outer.wrapper  {
         background: url('/static/img/half-circle-bg.png') #fff no-repeat 200px -225px;
-        height: 60em;
+        height: 50em;
         margin: -1em auto;
         padding: 0;
         position: relative;
@@ -45,6 +46,11 @@ body {
         text-align: center;
         width: 190px;
     }
+
+    nav.tabs.ul.active.blue { background: blue; color: #000; } 
+    nav.tabs.ul.active.red { background: red; color: #000;  }
+    nav.tabs.ul.active.yellow { background: yellow; color: #000;  }
+    nav.tabs.ul.active.green { background: green; color: #000;  }
 
     nav.tabs ul li a {
         color: #fff;
