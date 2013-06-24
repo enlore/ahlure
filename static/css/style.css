@@ -26,8 +26,7 @@ body {
         margin-bottom: 1em;
         padding-bottom: 1em;
         overflow: hidden;
-        width: 44em;
-    }
+        width: 44em; }
 
     .logo.wrapper img { 
         float: left;
@@ -47,10 +46,10 @@ body {
         width: 190px;
     }
 
-    nav.tabs.ul.active.blue { background: blue; color: #000; } 
-    nav.tabs.ul.active.red { background: red; color: #000;  }
-    nav.tabs.ul.active.yellow { background: yellow; color: #000;  }
-    nav.tabs.ul.active.green { background: green; color: #000;  }
+    nav.tabs ul li.active .blue { background: blue; color: #000; }
+    nav.tabs ul li.active .red { background: red; color: #000;  }
+    nav.tabs ul li.active .yellow { background: yellow; color: #000;  }
+    nav.tabs ul li.active .green { background: green; color: #000;  }
 
     nav.tabs ul li a {
         color: #fff;
