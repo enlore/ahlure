@@ -1,114 +1,51 @@
 {% extends "layout.html" %}
 {% block body %}
-<header>
-<div id="logo-wrapper">
-    <img src="/static/img/ahlure-logo_current.jpg">
-</div>
-</header>
-<div id="wrapper">
-    <nav>
-    <ul>
-        <li><a id="section1-link" href="#"><h2>Section 1</h2></a></li>
-        <li><a id="section2-link" href="#"><h2>Section 2</h2></a></li>
-        <li><a id="section3-link" href="#"><h2>Section 3</h2></a></li>
-        <li><a id="section4-link" href="#"><h2>Section 4</h2></a></li>
-    </ul>
-    </nav>
+    <div class="outer wrapper">
+        <div class="logo wrapper">
+            <img src="/static/img/ahlure-logo.jpg">
+        </div>
+        <div class="content wrapper">
+            <nav class="tabs">
+                <ul>
+                    <li><a href="#tab-1">Section</a></li>
+                    <li><a href="#tab-2">Section</a></li>
+                    <li><a href="#tab-3">Section</a></li>
+                    <li><a href="#tab-4">Section</a></li>
+                </ul>
+            </nav>
 
-    <div id="inner-wrapper">
-        <section id="section1" class="active">
-        <p>
+            <section id="tab-1" class="content inner active">
+                <p>
+                    Godard typewriter Bushwick tousled DIY commodo. Before they sold out proident magna ea. Chillwave scenester Marfa est, assumenda duis church-key 8-bit ad flannel typewriter dreamcatcher mlkshk. Single-origin coffee roof party Tonx Wes Anderson intelligentsia. Post-ironic church-key whatever, sartorial forage Etsy Vice duis esse deep v freegan laboris. Bushwick shoreditch dreamcatcher, disrupt lomo tote bag 90's Pinterest aliquip. Gluten-free tattooed esse butcher.
+                </p>
+                <p>
+        Tofu Banksy typewriter banjo Tonx. Next level direct trade swag salvia proident. Irony sriracha Cosby sweater, Wes Anderson placeat laboris kogi kitsch hoodie veniam et incididunt wayfarers letterpress. Reprehenderit occaecat et, stumptown enim mustache meh chambray asymmetrical Tonx keffiyeh pariatur pug. Commodo voluptate irure before they sold out Cosby sweater, four loko deep v. Nisi intelligentsia try-hard, church-key authentic wolf flannel before they sold out blog next level disrupt. Fugiat authentic retro, blog before they sold out pickled deserunt pug YOLO single-origin coffee banh mi selvage.
+                </p>
+            </section>
 
-        Section 1
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt
-        turpis condimentum, ultricies lorem eget, blandit risus. Praesent eleifend
-        tincidunt ipsum, eu mattis libero congue quis. Praesent faucibus, lorem eget
-        porttitor tristique, augue lacus pulvinar justo, ac ultricies tellus justo nec
-        ipsum. Quisque pharetra feugiat eros, nec mattis tellus semper ut. Integer
-        tincidunt aliquet tristique. Mauris quis felis sed lacus gravida posuere eget
-        in risus. Vestibulum in nisi ac risus ultricies aliquet sit amet vel eros.
-        Integer vehicula at felis ut pharetra.  </p>
+            <section id="tab-2" class="content inner">
+                <p>
+                    Laborum blue bottle art party Truffaut, church-key est banh mi helvetica. Vinyl tempor non, tumblr nesciunt whatever beard seitan Neutra gluten-free umami 8-bit chambray. Pug before they sold out dreamcatcher exercitation, hashtag pickled Neutra bespoke reprehenderit fap mixtape keytar. Nisi cupidatat authentic salvia, dreamcatcher High Life 90's consequat deep v. Culpa tattooed you probably haven't heard of them kale chips Truffaut. Squid biodiesel cornhole delectus you probably haven't heard of them tote bag occaecat voluptate, lomo nulla. Ad Godard nulla, literally kogi pariatur deserunt shabby chic.
+                </p>
+            </section>
 
-        <p>
-        Proin ullamcorper urna vitae lorem dapibus euismod. Etiam ultrices in eros
-        lobortis iaculis. Cras commodo gravida turpis vitae tempor. Nullam et turpis
-        tempor velit dignissim varius sed a tellus. Vivamus tristique mi sed nunc
-        condimentum tempus quis at nisl. Donec vitae placerat arcu. Aliquam sed orci eu
-        orci imperdiet pharetra sagittis ut velit. Vestibulum ultricies commodo mi, in
-        viverra neque rhoncus ac. Suspendisse vel urna nulla. Fusce tincidunt ante
-        nisi, at laoreet erat consequat at.
-        </p>
-        </section>
+            <section id="tab-3" class="content inner">
+                <p>
+                    High Life before they sold out jean shorts, nihil lo-fi single-origin coffee master cleanse ullamco deserunt do DIY ethnic umami YOLO. Sriracha wolf craft beer butcher adipisicing esse. Artisan gentrify et nostrud assumenda authentic, proident brunch dreamcatcher sed. Ut dolor selfies fingerstache forage, aliquip tempor in ex asymmetrical shoreditch Terry Richardson you probably haven't heard of them. Mustache enim placeat Carles Marfa, est officia helvetica iPhone cray single-origin coffee. Id commodo Vice gluten-free, Godard fingerstache Banksy fugiat ad hashtag tattooed beard try-hard Cosby sweater. Est et bitters twee, minim put a bird on it qui banh mi incididunt excepteur asymmetrical.
+                </p>
+            </section>
 
-        <section id="section2">
-        <p>
-
-        Section 2
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tincidunt
-        turpis condimentum, ultricies lorem eget, blandit risus. Praesent eleifend
-        tincidunt ipsum, eu mattis libero congue quis. Praesent faucibus, lorem eget
-        porttitor tristique, augue lacus pulvinar justo, ac ultricies tellus justo nec
-        ipsum. Quisque pharetra feugiat eros, nec mattis tellus semper ut. Integer
-        tincidunt aliquet tristique. Mauris quis felis sed lacus gravida posuere eget
-        in risus. Vestibulum in nisi ac risus ultricies aliquet sit amet vel eros.
-        Integer vehicula at felis ut pharetra.  </p>
-
-        <p>
-        Proin ullamcorper urna vitae lorem dapibus euismod. Etiam ultrices in eros
-        lobortis iaculis. Cras commodo gravida turpis vitae tempor. Nullam et turpis
-        tempor velit dignissim varius sed a tellus. Vivamus tristique mi sed nunc
-        condimentum tempus unicorn buttsex. Donec vitae placerat arcu. Aliquam sed orci eu
-        orci imperdiet pharetra sagittis ut velit. Vestibulum ultricies commodo mi, in
-        viverra neque rhoncus ac. Suspendisse vel urna nulla. Fusce tincidunt ante
-        nisi, at laoreet erat consequat at.
-        </p>
-
-        </section>
-
-        <section id="section3">
-        <p>
-
-        Section 3
-        Now this is the story all about how
-        My life got flipped, turned upside down
-        And I'd like to take a minute just sit right there
-        I'll tell you how I became the prince of a town called Bel-air
-
-        In west Philadelphia born and raised
-        On the playground where I spent most of my days
-        Chilling out, maxing, relaxing all cool
-        And all shooting some b-ball outside of the school
-        When a couple of guys, they were up to no good
-        Started making trouble in my neighbourhood
-        I got in one little fight and my mom got scared
-        And said "You're moving with your auntie and uncle in Bel-air"
-        </p>
-
-        <p>
-
-        I whistled for a cab and when it came near the
-        License plate said "fresh" and had a dice in the mirror
-        If anything I could say that this cab was rare
-        But I thought nah, forget it, yo homes to Bel-air!
-
-        I pulled up to a house about seven or eight
-        And I yelled to the cabby "Yo, homes smell you later!"
-        Looked at my kingdom I was finally there
-        To sit on my throne as the prince of Bel-air
-        </p>
-        </section>
-
-        <section id="section4">
-        <p>
-
-        Section 4
-        Hoodie fixie mixtape tofu. Tonx Etsy vegan synth, McSweeney's keffiyeh pork belly messenger bag fixie cliche Terry Richardson you probably haven't heard of them narwhal pug photo booth. Bitters pop-up put a bird on it fanny pack retro, Brooklyn cray Truffaut cornhole hashtag before they sold out photo booth freegan 90's. Brunch try-hard meggings wolf scenester, deep v tattooed small batch street art mumblecore ennui fashion axe church-key. Farm-to-table trust fund fixie fanny pack skateboard, Marfa Tonx american apparel kitsch. Sriracha lomo bitters letterpress shabby chic, food truck vegan chillwave asymmetrical hoodie narwhal Tonx. Master cleanse post-ironic photo booth Banksy food truck 3 wolf moon.
-
-
-        </p>
-        <p>
-        Forage freegan blog master cleanse squid butcher. Lo-fi whatever cray, deep v Carles Odd Future Tonx. Portland Echo Park roof party, fixie seitan pug Terry Richardson church-key hoodie fap kogi semiotics fashion axe sartorial mixtape. Ugh banh mi umami narwhal Vice. Pork belly sartorial beard four loko wolf direct trade, synth meggings whatever ethical helvetica pug intelligentsia fap vegan. Kogi banh mi sartorial single-origin coffee. Cred Marfa you probably haven't heard of them, biodiesel tote bag vinyl craft beer hashtag sartorial church-key.
-        </p>
+            <section id="tab-4" class="content inner">
+                <p>
+                    Chillwave dolore cred leggings Truffaut. Gluten-free 8-bit fugiat, cliche High Life occaecat locavore Bushwick hashtag sartorial. Wolf tofu commodo fap Terry Richardson, anim 3 wolf moon twee mollit. Intelligentsia gluten-free ullamco typewriter aute. Literally pitchfork pork belly, tofu +1 post-ironic mixtape non photo booth kale chips pop-up single-origin coffee. Wayfarers umami PBR, chambray pariatur sustainable Vice laboris Schlitz squid chillwave church-key helvetica reprehenderit Echo Park. Williamsburg duis ethnic, incididunt tumblr bicycle rights readymade Schlitz hoodie leggings retro you probably haven't heard of them aute.
+                </p>
+            </section>
+        </div>
     </div>
-</div>
+    <script 
+        src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"
+        ></script>
+    <script
+        src="js/main.js"
+        ></script>
 {% endblock %}
