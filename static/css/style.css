@@ -11,6 +11,17 @@ body {
     background-size: cover;
 }
 
+nav.tabs ul {
+    background: #000;
+}
+
+nav.tabs ul li {
+    background: #000;
+}
+
+.content.inner {
+    background: #fff;
+}
 
 @media screen and (min-width: 48em) {
     .outer.wrapper  {
