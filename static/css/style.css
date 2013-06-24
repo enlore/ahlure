@@ -46,10 +46,10 @@ body {
         width: 190px;
     }
 
-    nav.tabs ul li.active .blue { background: blue; color: #000; }
-    nav.tabs ul li.active .red { background: red; color: #000;  }
-    nav.tabs ul li.active .yellow { background: yellow; color: #000;  }
-    nav.tabs ul li.active .green { background: green; color: #000;  }
+    nav.tabs ul li.active .blue { background: #D9EDEE; color: #000; }
+    nav.tabs ul li.active .red { background: #CD3824; color: #000;  }
+    nav.tabs ul li.active .yellow { background: #F8F499; color: #000;  }
+    nav.tabs ul li.active .green { background: #6A9B32; color: #000;  }
 
     nav.tabs ul li a {
         color: #fff;
