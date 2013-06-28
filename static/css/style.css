@@ -51,6 +51,7 @@ nav.tabs ul li {
 
     nav.tabs ul li {
         background: #000;
+        border-radius: 8px 8px 0 0;
         display: inline-block;
         list-style: none;
         margin-right: 15px;
@@ -58,10 +59,10 @@ nav.tabs ul li {
         width: 190px;
     }
 
-    nav.tabs ul li.active .blue { background: #D9EDEE; color: #000; }
-    nav.tabs ul li.active .red { background: #CD3824; color: #000;  }
-    nav.tabs ul li.active .yellow { background: #F8F499; color: #000;  }
-    nav.tabs ul li.active .green { background: #6A9B32; color: #000;  }
+    nav.tabs ul li.active.blue { background: #D9EDEE; color: #000; }
+    nav.tabs ul li.active.red { background: #CD3824; color: #000;  }
+    nav.tabs ul li.active.yellow { background: #F8F499; color: #000;  }
+    nav.tabs ul li.active.green { background: #6A9B32; color: #000;  }
 
     nav.tabs ul li a {
         color: #fff;
