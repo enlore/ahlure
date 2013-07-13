@@ -2,7 +2,10 @@
 {% block body %}
     <div class="outer wrapper">
         <div class="logo wrapper">
-            <img src="/static/img/ahlure-logo.jpg">
+            <a href="#">
+            <img src="/static/img/ahlure-logo.jpg" alt="DJ Ahlure Logo">
+            <h1> DJ Ahlure </h1>
+        </a>
         </div>
         <div class="content wrapper">
             <nav class="tabs">
@@ -15,6 +18,7 @@
             </nav>
 
             <section id="tab-1" class="content inner active ">
+                <h2 class="mobile">Welcome</h2>
                 <p>
                     <strong>DJ Ahlure</strong> is based out of Clarksville, Tennessee, and is available for a variety of occasions, such as:
                 </p>
@@ -41,6 +45,7 @@
            </section>
 
             <section id="tab-2" class="content inner">
+                <h2 class="mobile">Contact Me</h2>
                 <form action="{{ url_for('frontend.index') }}" method="POST">
                     {% with messages = get_flashed_messages(with_categories=True) %} 
                         {% if messages %}
@@ -73,9 +78,11 @@
             </section>
 
             <section id="tab-3" class="content inner">
+                <h2 class="mobile">Testimonials</h2>
             </section>
 
             <section id="tab-4" class="content inner">
+                <h2 class="mobile">Upcoming Gigs</h2>
             </section>
         </div>
     </div>
