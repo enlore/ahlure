@@ -42,7 +42,7 @@ nav.tabs ul li a {
 .content.inner p,
 .content.inner ul,
 .content.inner form {
-    margin: 0.6em auto 0.4em auto;
+    margin: 1em auto 0 auto;
     width: 85%;
 }
 
@@ -51,6 +51,21 @@ nav.tabs ul li a {
     display: block;
     margin-top: 0.6em;
     width: 100%;
+}
+
+input#submit:active {
+    background: #F44933;
+}
+
+input#submit {
+    background: rgb(205, 56, 36);
+    border: none;
+    border-bottom: 2px solid #9B2414;
+    border-radius: 4px;
+    color: #eee;
+    float: right;
+    margin: 0.5em 0 0 0;
+    padding: 6px;
 }
 
 @media screen and (min-width: 48em) {
@@ -68,15 +83,12 @@ nav.tabs ul li a {
 
     .logo.wrapper {
         border-bottom: 3px solid black;
+        float: left;
         margin: 0 0 0 4em;
         margin-bottom: 1em;
+        padding-left: 2em;
         padding-bottom: 1em;
         overflow: hidden;
-        width: 44em; }
-
-    .logo.wrapper img { 
-        float: left;
-        margin-left: 2em;
     }
 
     nav.tabs ul {
