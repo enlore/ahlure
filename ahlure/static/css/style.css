@@ -1,3 +1,5 @@
+* { box-sizing: border-box; -moz-box-sizing: border-box; outline: none; }
+
 body * { 
     margin: 0;
     padding: 0;
@@ -11,12 +13,44 @@ body {
     background-size: cover;
 }
 
+img {
+    display: block;
+}
+
+.outer.wrapper .logo.wrapper {
+    width: 95%;
+}
+
 nav.tabs ul li {
     background: #000;
+    border-bottom: 1px solid #777;
+    outline: none;
+}
+
+nav.tabs ul li a {
+    color: #fff;
+    display: block;
+    padding: 7px;
+    text-decoration: none;
 }
 
 .content.inner {
     background: #fff;
+    padding: 1em;
+}
+
+.content.inner p,
+.content.inner ul,
+.content.inner form {
+    margin: 0.6em auto 0.4em auto;
+    width: 85%;
+}
+
+.content.inner form textarea,
+.content.inner form input {
+    display: block;
+    margin-top: 0.6em;
+    width: 100%;
 }
 
 @media screen and (min-width: 48em) {
@@ -52,6 +86,7 @@ nav.tabs ul li {
     nav.tabs ul li {
         background: #000;
         border-radius: 8px 8px 0 0;
+        border-bottom: 2px solid #000;
         display: inline-block;
         list-style: none;
         margin-right: 15px;
@@ -59,17 +94,49 @@ nav.tabs ul li {
         width: 190px;
     }
 
-    nav.tabs ul li.active.blue { background: #D9EDEE; color: #000; }
-    nav.tabs ul li.active.red { background: #CD3824; color: #000;  }
-    nav.tabs ul li.active.yellow { background: #F8F499; color: #000;  }
-    nav.tabs ul li.active.green { background: #6A9B32; color: #000;  }
-
     nav.tabs ul li a {
-        color: #fff;
+        color: #ddd;
         display: block;
         height: 30px;
         line-height: 30px;
+        outline: none;
+        padding: 0;
         text-decoration: none;
+    }
+
+    nav.tabs ul li.active.blue { 
+        background: #D9EDEE; 
+        border-bottom: 2px solid #6FA8AA;
+        color: #13AAAF; 
+    }
+    nav.tabs ul li.active.blue a { 
+        color: #6FA8AA;
+    }
+
+    nav.tabs ul li.active.red { 
+        background: #CD3824; 
+        color: #000; 
+        border-bottom: 2px solid #9B2414;  
+    }
+
+    nav.tabs ul li.active.red a { 
+        color: #fff;
+    }
+
+    nav.tabs ul li.active.yellow { 
+        background: #F8F499; 
+        border-bottom: 2px solid #D3CB32;
+        color: #000; 
+    }
+
+    nav.tabs ul li.active.yellow a { 
+        color: #D3CB32;
+    }
+
+    nav.tabs ul li.active.green { 
+        background: #6A9B32; 
+        border-bottom: 2px solid #487219;
+        color: #000;  
     }
 
     .content.wrapper {
@@ -96,5 +163,31 @@ nav.tabs ul li {
     .content.inner.active {
         display: block;
     }
+    
+    .content.inner form {
+        margin: 0 auto;
+        width: 60%;
+    }
 
+    .content.inner form textarea,
+    .content.inner form input {
+        display: block;
+        width: 100%;
+    }
+
+    input#submit {
+        background: rgb(205, 56, 36);
+        border: none;
+        border-bottom: 2px solid #9B2414;
+        border-radius: 4px;
+        color: #eee;
+        float: right;
+        margin: 0.5em 0 0 0;
+        padding: 6px;
+        width: 35%; 
+    }
+
+    input#submit:hover {
+        background: #F44933;
+    }
 }
