@@ -15,6 +15,7 @@ __all__ = ['create_app']
 
 def create_app():
     app = Flask(__name__)
+    app.secret_key = 'al;kdfjaoevina 092; dev'
     app.config.from_object(__name__)
     app.config.from_envvar('APPCONFIG', silent=True)
 

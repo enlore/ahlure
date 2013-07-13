@@ -1,4 +1,5 @@
-from flask import Blueprint, request, render_template
+from flask import Blueprint, request, render_template, redirect
+from .forms import ContactForm
 
 frontend = Blueprint('frontend', __name__)
 
@@ -26,24 +27,15 @@ def send_mail(msg, rcpt):
 # routes
 @frontend.route('/', methods = [u'GET', u'POST'])
 def index():
-    if request.method == u'POST':
-        form = request.form
+    form = ContactForm()
 
-        rcpt = form[u'contact-email']
-        subj = u'[ahlure.net CONTACT FORM]'
-        msg = u"""
-        Submission to ahlure.net:
-        Name:  %s
-        Phone: %s
-        Message: 
-        %s
-        """ % (form['contact-name'], form['contact-phone'], form['contact-blurb'])
-        mime_msg = MIMEText(msg)
-        mime_msg['Subject'] = '[ahlure.net CONTACT FORM]'
-        smtp = smtplib.SMTP('127.0.0.1', 143)
+    if form.validate_on_submit():
+        from email.mime.text import MIMEText
         smtp.sendmail('contact@ahlure.net', rcpt, mime_msg.as_string())
-        return render_template('frontend/index.html', msg=msg)
-    return render_template('frontend/index.html')
+        flash('Thank you for your message!  I\'ll get back to you soon.', 'success')
+        return redirect(url_for('frontend.index'))
+
+    return render_template('frontend/index.html', form=form)
 
 @frontend.route('/google1f5182fb6bdd5d62.html', methods=['GET'])
 def gwmt():
