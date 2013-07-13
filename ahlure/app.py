@@ -2,21 +2,15 @@ from flask import Flask
 import smtplib
 from email.mime.text import MIMEText
 from .frontend import frontend
+from .config import Config
 
-ERRLOG = u'/tmp/ahlure.err.log'
-ADMINS = [u'oneofy@gmail.com']
-CONTACTS = [u'oneofy@gmail.com']
-GMAIL_ACCOUNT = None
-GMAIL_PASS = None
-PORT = 5000
-HOST = 'localhost'
 
 __all__ = ['create_app']
 
 def create_app():
     app = Flask(__name__)
     app.secret_key = 'al;kdfjaoevina 092; dev'
-    app.config.from_object(__name__)
+    app.config.from_object(Config())
     app.config.from_envvar('APPCONFIG', silent=True)
 
     app.register_blueprint(frontend)
@@ -38,7 +32,7 @@ def create_app():
         # for emails yes!
         serv = u'127.0.0.1'
         who = u'ahlure@chilidog.rokitpowered.net'
-        whom = ADMINS
+        whom = app.config['ADMINS']
         subj = u'[AHLURE TOTALLY BARFED]'
         mh = SMTPHandler(serv, who, whom, subj)
         mh.setLevel(logging.ERROR)
