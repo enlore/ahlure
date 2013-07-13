@@ -89,6 +89,10 @@ nav.tabs ul li {
         margin: 1em;
     }
 
+    .content .inner ul {
+        margin: 2em 0 2em 4em;
+    }
+    
     .content.inner.active {
         display: block;
     }
