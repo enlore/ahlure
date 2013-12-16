@@ -1,5 +1,85 @@
 extends layout/base
 block body
-  .container
-    .row
-      h1.col-sm-12 herro
+  .head(
+      data-0="background-position:center 0px;",
+      data-150="background-position:center -150px;",
+      data-300="background-position:center -300px;"
+    )
+    .logo-container(data-0="top:5em;opacity:1;",data-300="top:15em;opacity:0;")
+      img.logo.img-responsive(src="/img/logo.png")
+
+  .glow
+
+  .content
+    .container
+      .row
+        .col-sm-8.col-sm-offset-2
+          p.lead.
+            DJ Ahlure is based out of Clarksville, Tennessee, and is available
+            for a variety of occasions, such as: To schedule an appointment to
+            meet with Ahlure, inquire about pricing for an event, or for any
+            additional questions, call (931) 334-1009, or click on the
+            Contact Me tab at the top of the website and leave a message, and
+            he’ll get back to you expeditiously.  Thank you for visiting!
+
+      .row.hidden-xs
+        .col-sm-4
+          img.img-responsive(src="http://placehold.it/400x400")
+        .col-sm-4
+          img.img-responsive(src="http://placehold.it/400x400")
+        .col-sm-4
+          img.img-responsive(src="http://placehold.it/400x400")
+
+  .contact(
+    data-450="background-position:-300px -300px;",
+    data-600="background-position:-400px -300px;"
+  )
+    .container
+      .row
+        .col-sm-8.col-sm-offset-2
+          form.form.contact-form(action="", method="",
+            data-0="",
+            data-500=""
+          )
+            .row
+              .form-group.col-sm-12
+                label.control-label(for="name") Name
+                input.form-control(name="name")
+            .row
+              .form-group.col-sm-6
+                label.control-label(for="email") Email
+                input.form-control(name="email")
+              .form-group.col-sm-6
+                label.control-label(for="phone") Phone
+                input.form-control(name="phone")
+            .row
+              .form-group.col-sm-12
+                label.control-label(for="about") About Your Event
+                textarea.form-control(name="about")
+            .row
+              .form-group.col-sm-3
+                input.form-control(type="submit")
+
+  #about-me.about-me
+    .container
+      .row
+        .col-sm-8.col-sm-offset-2
+          p.
+            I’m a New York native that’s lived here in Clarksville for two
+            decades. I’m a dj, realtor, and graphic designer touched by a deep
+            and abiding love for Clarksville. I’m originally from New York, but
+            my love has kept me in Clarksville for two decades.  Any good dj
+            knows that the feeling of the crowd is the most important part of a
+            dj’s job, and my long career cultivating my people skills has made
+            them top notch! I have professional quality equipment, music to fit
+            any mood, event, or venue, and experience playing clubs, birthdays,
+            weddings, and parties. You won’t be disappointed!
+
+
+  .footer
+    .container
+      .row
+        .col-sm-6
+          p Created by <a href="http://elcreativegroup.com">E|L Creative Group</a>
+        .col-sm-6
+          p &copy;2013 DJ Ahlure
