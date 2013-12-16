@@ -3,12 +3,27 @@
 
 @light-gold: #E9BF35;
 @dark-gold: #F5A935;
+@velvety-black: #0B0C05;
+
+@body-bg: @velvety-black;
 
 /* lol hai
  **********/
+ul { list-style: none; }
+
 html, body {
     height: 100%;
-    background: black;
+    background: @body-bg;;
+}
+
+nav.navbar.navbar-default {
+    border-radius: none;
+}
+
+@media screen and (min-width: @tablet) {
+    nav.navbar.navbar-defaul {
+        border-radius: none;
+    }
 }
 
 .head {
@@ -45,27 +60,23 @@ html, body {
 }
 
 .content {
-    .lead {
-        color: #eee;
-        font-size: 18px;
-    }
+    color: #eee;
+    font-size: 18px;
+    p { padding: 2em 0 2em 0; }
 }
 
 @media screen and (min-width: @tablet) {
     .content {
-        .lead {
-            padding: 2em 0 2em 0;
-            font-size: 20px;
-        }
+        font-size: 20px;
     }
 }
 
 .contact {
-    background: url('/img/head-banner.jpg') 0 0;
+    background: url('/img/head-banner.jpg') -200px 0;
     min-height: 400px;
     margin-top: 2em;
     .contact-form {
-        background: rgba(209, 255, 253, 0.9);
+        background: rgba(209, 255, 253, 0.6);
         border-radius: 4px;
         padding: 2em;
         margin-top: 2em;
@@ -73,7 +84,9 @@ html, body {
 }
 
 @media screen and (min-width: @tablet) {
-
+    .contact {
+        background-position: 0 0;
+    }
 }
 
 .about-me {
