@@ -8,7 +8,22 @@ block body
     .logo-container(data-0="top:5em;opacity:1;",data-300="top:15em;opacity:0;")
       img.logo.img-responsive(src="/img/logo.png")
 
-  .glow
+  nav.navbar.navbar-default
+    .navbar-header
+      button.navbar-toggle(
+        type="button", data-toggle="collapse",
+        data-target="#nav-collapse"
+      )
+        span.sr-only Toggle nav
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+
+    #nav-collapse.collapse.navbar-collapse
+      .container
+        ul.nav.navbar-nav
+          li: a(href="#contact-me") Contact Me
+          li: a(href="#about-me") About Me
 
   .content
     .container
@@ -16,7 +31,17 @@ block body
         .col-sm-8.col-sm-offset-2
           p.lead.
             DJ Ahlure is based out of Clarksville, Tennessee, and is available
-            for a variety of occasions, such as: To schedule an appointment to
+            for a variety of occasions, such as:
+
+          ul.services
+            li Weddings
+            li Birthday Parties
+            li Graduations
+            li Club and Venue Events
+            li And many more!
+
+          p.body.
+            To schedule an appointment to
             meet with Ahlure, inquire about pricing for an event, or for any
             additional questions, call (931) 334-1009, or click on the
             Contact Me tab at the top of the website and leave a message, and
@@ -30,7 +55,7 @@ block body
         .col-sm-4
           img.img-responsive(src="http://placehold.it/400x400")
 
-  .contact(
+  #contact-me.contact(
     data-450="background-position:-300px -300px;",
     data-600="background-position:-400px -300px;"
   )
