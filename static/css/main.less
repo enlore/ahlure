@@ -9,6 +9,11 @@
 @fg-color: @off-white;
 @body-bg: @velvety-black;
 
+@font-face {
+    src: url('/fonts/helvetica-neue.dfont');
+    font-family: 'HelveticaNeue';
+}
+
 h1,h2,h3,h4,h5,h6,
 p,span,ul {
     color: @fg-color;
@@ -20,7 +25,8 @@ ul { list-style: none; }
 
 html, body {
     height: 100%;
-    background: @body-bg;;
+    background: @body-bg;
+    background: url('/img/ahlure-bg.jpg');
 }
 
 nav.navbar.navbar-default {
@@ -38,30 +44,48 @@ nav.navbar.navbar-default {
     background: url('/img/speaker_bg.png');
     background-repeat: no-repeat;
     background-position: center -300px;
-    background-size: 100%;
+    background-size: cover;
     border-bottom: 10px solid rgba(0, 0, 0, 0.9);
     min-height: 150px;
 
     .logo-container {
+        display: none;
         padding: 8px;
         background: rgba(255, 255, 255, 0.7);
-        top: 2em;
         position: relative;
         border-bottom: 1px solid #000;
         border-top: 1px solid #000;
+        .logo {
+            display: block;
+            z-index: 10;
+            margin: 0 auto;
+        }
     }
 
-    .logo {
+    .logo-container.small {
         display: block;
-        z-index: 10;
-        margin: 0 auto;
+        top: 1em;
+        .logo {
+            width: 300px;
+        }
     }
 }
 
 @media screen and (min-width: @tablet) {
     .head {
-        min-height: 340px;
+        min-height: 440px;
         background-position: center;
+        .logo-container {
+            display: block;
+
+            .logo {
+                width: auto;
+            }
+        }
+
+        .logo-container.small {
+            display: none;
+        }
     }
 }
 
@@ -76,12 +100,22 @@ nav.navbar.navbar-default {
 
 .content {
     font-size: 18px;
-    p { padding: 2em 0 2em 0; }
+    p {
+        padding: 2em 1em 2em 1em;
+        background: rgba(30, 30, 30, 0.6);
+        border-radius: 4px;
+    }
 }
 
 @media screen and (min-width: @tablet) {
     .content {
         font-size: 20px;
+        .deck {
+            font-family: 'HelveticaNeue', 'Helvetica', sans-serif;
+            font-size: 126px;
+            font-weight: lighter;
+            margin-left: -40%;
+        }
     }
 }
 
