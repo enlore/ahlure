@@ -1,5 +1,6 @@
 @import 'mixins.less';
 @tablet: 768px;
+@screen-lg: 1200px;
 
 @light-gold: #E9BF35;
 @dark-gold: #F5A935;
@@ -47,10 +48,7 @@ nav.navbar.navbar-default {
 }
 
 .head {
-    background: url('/img/speaker_bg.png');
-    background-repeat: no-repeat;
-    background-position: center -300px;
-    background-size: cover;
+    background: url('/img/speaker_bg.png') no-repeat;
     border-bottom: 10px solid rgba(0, 0, 0, 0.9);
     min-height: 150px;
 
@@ -80,7 +78,6 @@ nav.navbar.navbar-default {
 @media screen and (min-width: @tablet) {
     .head {
         min-height: 440px;
-        background-position: center;
         .logo-container {
             display: block;
 
@@ -92,6 +89,12 @@ nav.navbar.navbar-default {
         .logo-container.small {
             display: none;
         }
+    }
+}
+
+@media screen and (min-width: @screen-lg){
+    .head {
+        background-size: conver;
     }
 }
 
