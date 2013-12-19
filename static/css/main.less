@@ -23,9 +23,8 @@
     font-family: 'HelveticaNeue';
 }
 
-.align-center {
-    text-align: center;
-}
+.align-center { text-align: center; }
+.align-right { text-align: right; }
 
 .center-block {
     display: block;
@@ -85,7 +84,7 @@ nav.navbar.navbar-default {
 }
 
 .head {
-    background: url('/img/speaker_bg.png') no-repeat;
+    background: url('/img/speaker_bg.jpg') no-repeat;
     border-bottom: 10px solid rgba(0, 0, 0, 0.9);
     min-height: 150px;
 
@@ -197,9 +196,15 @@ nav.navbar.navbar-default {
 
 .contact {
     background: url('/img/head-banner.jpg') -200px 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
     box-shadow: 0 0 4px 5px #000;
     min-height: 400px;
     margin-top: 2em;
+    h3 {
+        color: @velvety-black;
+    }
     .contact-form {
         background: rgba(209, 255, 253, 0.6);
         border-radius: 4px;
