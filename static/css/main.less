@@ -11,6 +11,9 @@
 
 @fg-color: @off-white;
 @body-bg: @velvety-black;
+
+@services-list: @blue;
+
 @footer-bg: @blue;
 @footer-link: @red;
 
@@ -20,12 +23,12 @@
 }
 
 h1,h2,h3,h4,h5,h6,
-p,span,ul {
+p,span,ul,ol {
     color: @fg-color;
 }
 
 
-ul, p {
+ul, ol, p {
     font-size: 22px;
 }
 
@@ -127,6 +130,8 @@ nav.navbar.navbar-default {
     margin: 0 auto;
     text-align: left;
     list-style: disc;
+    font-size: 26px;
+    color: @services-list;
 }
 
 @media screen and (min-width: @tablet) {
