@@ -18,7 +18,7 @@
 @footer-link: @red;
 
 @font-face {
-    src: url('/fonts/helvetica-neue.dfont');
+    src: url('/fonts/HelveticaNeueUltraLight.ttf');
     font-family: 'HelveticaNeue';
 }
 
@@ -44,9 +44,12 @@ ul, ol, p {
 
 a { color: @red; }
 
+h1,h2,h3,h4,h5,h6,ul,p {
+    font-family: 'ABeeZee', sans-serif;
+}
+
 @media sceen and (min-width: @tablet) {
     ul,p {
-        font-family: 'ABeeZee', sans-serif;
         font-size: 28px;
     }
 }
@@ -125,7 +128,7 @@ nav.navbar.navbar-default {
     }
 }
 
-@media screen and (min-width: @screen-lg){
+@media screen and (min-width: 1500px){
     .head {
         background-size: cover;
     }
@@ -169,6 +172,7 @@ nav.navbar.navbar-default {
 }
 
 .deck {
+    font-family: HelveticaNeue, sans-serif;
     text-align: center;
     padding-left: 0;
     font-size: 56px;
@@ -176,11 +180,19 @@ nav.navbar.navbar-default {
 
 @media screen and (min-width: @tablet) {
     .deck {
-        font-family: 'HelveticaNeue', 'Helvetica', sans-serif;
         font-size: 126px;
-        font-weight: lighter;
         text-align: left;
         padding-left: 20px;
+    }
+}
+
+.phone {
+    background: rgba(30, 30, 30, 0.8);
+    padding: 1em;
+    margin-top: 2em;
+    h2 {
+        font-size: 50px;
+        margin: 0;
     }
 }
 
@@ -188,7 +200,7 @@ nav.navbar.navbar-default {
     background: url('/img/head-banner.jpg') -200px 0;
     box-shadow: 0 0 4px 5px #000;
     min-height: 400px;
-    margin-top: 4em;
+    margin-top: 2em;
     .contact-form {
         background: rgba(209, 255, 253, 0.6);
         border-radius: 4px;
