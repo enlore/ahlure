@@ -6,9 +6,13 @@
 @dark-gold: #F5A935;
 @velvety-black: #0B0C05;
 @off-white: #ddd;
+@blue: #109EFD;
+@red: #EE1B2D;
 
 @fg-color: @off-white;
 @body-bg: @velvety-black;
+@footer-bg: @blue;
+@footer-link: @red;
 
 @font-face {
     src: url('/fonts/helvetica-neue.dfont');
@@ -18,6 +22,18 @@
 h1,h2,h3,h4,h5,h6,
 p,span,ul {
     color: @fg-color;
+}
+
+
+ul, p {
+    font-size: 22px;
+}
+
+@media sceen and (min-width: @tablet) {
+    ul,p {
+        font-family: 'ABeeZee', sans-serif;
+        font-size: 28px;
+    }
 }
 
 .center-block {
@@ -33,12 +49,20 @@ ul { list-style: none; }
 html, body {
     height: 100%;
     background: @body-bg;
+    background: url('/img/ahlure-bg.jpg') no-repeat;
+    background-size: cover;
+}
+
+body.lt-ie9 {
     background: url('/img/ahlure-bg.jpg');
 }
 
 nav.navbar.navbar-default {
     border-radius: 0;
     box-shadow: 0 0 4px 5px #000;
+    ul {
+        font-size: 22px;
+    }
 }
 
 @media screen and (min-width: @tablet) {
@@ -98,8 +122,19 @@ nav.navbar.navbar-default {
     }
 }
 
+.services {
+    width: 60%;
+    margin: 0 auto;
+    text-align: left;
+    list-style: disc;
+}
+
 @media screen and (min-width: @tablet) {
     .services {
+        width: auto;
+        margin: none;
+        list-style: none;
+        text-align: center;
         li {
             display: inline-block;
             margin-right: 1em;
@@ -107,28 +142,34 @@ nav.navbar.navbar-default {
     }
 }
 
-.content {
-    font-size: 18px;
+.words {
+    background: rgba(30, 30, 30, 0.8);
+    border-radius: 4px;
+    padding: 1em;
+    margin-top: 2em;
+    text-align: center;
     p {
-        padding: 2em 1em 2em 1em;
+        padding-top: 1em;
     }
 }
 
-.words {
-    background: rgba(30, 30, 30, 0.6);
-    border-radius: 4px;
-    padding: 1em;
+.videos {
+    margin-top: 2em;
+}
+
+.deck {
+    text-align: center;
+    padding-left: 0;
+    font-size: 56px;
 }
 
 @media screen and (min-width: @tablet) {
-    .content {
-        font-size: 20px;
-        .deck {
-            font-family: 'HelveticaNeue', 'Helvetica', sans-serif;
-            font-size: 126px;
-            font-weight: lighter;
-            margin-left: -40%;
-        }
+    .deck {
+        font-family: 'HelveticaNeue', 'Helvetica', sans-serif;
+        font-size: 126px;
+        font-weight: lighter;
+        text-align: left;
+        padding-left: 20px;
     }
 }
 
@@ -142,6 +183,7 @@ nav.navbar.navbar-default {
         border-radius: 4px;
         padding: 2em;
         margin-top: 2em;
+        margin-bottom: 2em;
     }
 }
 
@@ -151,18 +193,16 @@ nav.navbar.navbar-default {
     }
 }
 
-.about-me {
-    p {
-        padding: 2em 0 2em 0;
-        font-size: 20px;
-    }
-}
-
 .footer {
-    background: #fff;
+    background: @footer-bg;
     text-align: center;
+    margin-top: 2em;
     p {
         margin: 0;
         color: #000;
+        font-size: 18px;
+        a { color: @footer-link; }
+        a:hover {
+        }
     }
 }
