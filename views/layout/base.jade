@@ -39,6 +39,10 @@ body#skrollr-body.no-skrollr
   script.
     var s = skrollr.init()
 
+    if ($(window).width() <= 768) {
+      s.destroy()
+    }
+
     $(window).resize(function () {
       if ($(this).width() <= 768) {
         s.destroy()
