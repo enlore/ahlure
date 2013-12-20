@@ -9,13 +9,16 @@
 @off-white: #ddd;
 @blue: #109EFD;
 @red: #EE1B2D;
+@teal: #339999;
 
 @fg-color: @off-white;
 @body-bg: @velvety-black;
 
+@navbar-toggle-bg: @teal;
+
 @services-list: @blue;
 
-@footer-bg: @blue;
+@footer-bg: @teal;
 @footer-link: @red;
 
 @font-face {
@@ -77,11 +80,18 @@ body.lt-ie9 {
     background: url('/img/ahlure-bg.jpg');
 }
 
-nav.navbar.navbar-default {
+.navbar.navbar-default {
     border-radius: 0;
     box-shadow: 0 0 4px 5px #000;
     ul {
         font-size: 22px;
+    }
+}
+
+.navbar.navbar-default .navbar-header .navbar-toggle {
+    background: @navbar-toggle-bg;
+    .icon-bar {
+        color: darken(@navbar-toggle-bg, 15%);
     }
 }
 
