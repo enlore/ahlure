@@ -37,8 +37,14 @@ p,span,ul,ol {
     color: @fg-color;
 }
 
-ul, ol, p {
-    font-size: 22px;
+ul,ol,p {
+    font-size: 18px;
+}
+
+@media screen and (min-width: @tablet) {
+    ul,ol,p {
+        font-size: 26px;
+    }
 }
 
 a { color: @red; }
@@ -48,9 +54,6 @@ h1,h2,h3,h4,h5,h6,ul,p {
 }
 
 @media sceen and (min-width: @tablet) {
-    ul,p {
-        font-size: 28px;
-    }
 }
 
 /* lol hai
@@ -84,10 +87,9 @@ nav.navbar.navbar-default {
 }
 
 .head {
-    background: url('/img/speaker_bg.jpg') no-repeat;
+    background: url('/img/play_btn_bg.jpg') no-repeat;
     border-bottom: 10px solid rgba(0, 0, 0, 0.9);
     min-height: 150px;
-
     .logo-container {
         display: none;
         padding: 8px;
@@ -113,13 +115,11 @@ nav.navbar.navbar-default {
 
 @media screen and (min-width: @tablet) {
     .head {
+        background: url('/img/speaker_bg.jpg') no-repeat;
         min-height: 440px;
         .logo-container {
             display: block;
-
-            .logo {
-                width: auto;
-            }
+            .logo { width: auto; }
         }
 
         .logo-container.small {
@@ -139,7 +139,6 @@ nav.navbar.navbar-default {
     margin: 0 auto;
     text-align: left;
     list-style: disc;
-    font-size: 26px;
     color: @services-list;
 }
 
@@ -149,6 +148,7 @@ nav.navbar.navbar-default {
         margin: none;
         list-style: none;
         text-align: center;
+        font-size: 30px;
         li {
             display: inline-block;
             margin-right: 1em;
