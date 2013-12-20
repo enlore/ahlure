@@ -38,6 +38,16 @@ body#skrollr-body.no-skrollr
   script(src="/js/vendor/skrollr.min.js")
   script.
     var s = skrollr.init()
+
+    $(window).resize(function () {
+      if ($(this).width() <= 768) {
+        s.destroy()
+        console.log('destory fired')
+      } else if ($(this).width() > 768) {
+        s = skrollr.init()
+      }
+
+    })
   script(type="text/javascript", src="/js/main.js")
 
   script.
