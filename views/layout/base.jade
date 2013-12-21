@@ -37,6 +37,9 @@ body#skrollr-body.no-skrollr
       <a href="">activate Google Chrome Frame</a> to significantly
       improve your browsing experience (and make the lives of developers
       like me a ton easier).
+
+  -if (flashes[0])
+    p.success.flash= flashes[0]
   block body
 
   script(src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js")
