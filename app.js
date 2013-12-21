@@ -30,9 +30,19 @@ app.use(app.router);
 app.use(require('less-middleware')({ src: path.join(__dirname, 'static') }));
 app.use(express.static(path.join(__dirname, 'static')));
 
+var mail_opts = {}
+mail_opts.sender = 'CONTACT@ahlure.net'
+mail_opts.subj = 'AHLURE LEAD'
+mail_opts.body = ''
+
+if ('production' == app.get('env')) {
+    mail_opts.recp = ['aelliott2120@gmail.com', 'oneofy@gmail.com']
+}
+
 // development only
 if ('development' == app.get('env')) {
-  app.use(express.errorHandler());
+    app.use(express.errorHandler());
+    mail_opts.recp = ['oneofy@gmail.com']
 }
 
 app.get('/', routes.index);
