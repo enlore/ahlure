@@ -28,7 +28,6 @@
 
 .align-center { text-align: center; }
 .align-right { text-align: right; }
-
 .center-block {
     display: block;
     margin-left: auto;
@@ -202,8 +201,22 @@ body.lt-ie9 {
     }
 }
 
+.video-bg {
+    position: relative;
+    overflow: hidden;
+
+    .boom-vid {
+        position: absolute;
+        width: 100%;
+        height: auto;
+    }
+}
+
 .videos {
     margin-top: 2em;
+    padding-top: 2em;
+    padding-bottom: 2em;
+
 }
 
 .deck {
@@ -240,13 +253,6 @@ body.lt-ie9 {
 }
 
 .contact {
-    background: url('/img/head-banner.jpg') -200px 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    box-shadow: 0 0 4px 5px #000;
-    min-height: 400px;
-    margin-top: 2em;
     h3 {
         color: @velvety-black;
     }

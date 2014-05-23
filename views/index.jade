@@ -65,8 +65,7 @@ block body
           h3.align-center info@ahlure.net
 
 
-  .videos
-    .container
+    //
       .row.hidden-xs
         .col-md-12
           h2.align-center Media from parties I've thrown:
@@ -77,33 +76,35 @@ block body
         .col-lg-6.hidden-md.hidden-sm
           iframe.center-block(width="530",height="315",src="//www.youtube.com/embed/fPc-X2zpRxM",frameborder="0",allowfullscreen)
 
-  #contact-me.contact(
-  )
-    .container
-      .row
-        .col-sm-8.col-sm-offset-2
-          form.form.contact-form(action="/", method="POST")
-            .row
-              .col-sm-12
-                h3.align-right Contact Me!
-            .row
-              .form-group.col-sm-12
-                label.control-label(for="name") Name
-                input.form-control(name="name")
-            .row
-              .form-group.col-sm-6
-                label.control-label(for="email") Email
-                input.form-control(name="email")
-              .form-group.col-sm-6
-                label.control-label(for="phone") Phone
-                input.form-control(name="phone")
-            .row
-              .form-group.col-sm-12
-                label.control-label(for="about") About Your Event
-                textarea.form-control(name="about")
-            .row
-              .form-group.col-sm-3
-                input.form-control.btn.btn-submit(type="submit")
+  #contact-me.contact()
+    .video-bg
+      video.boom-vid(src="/vid/boom.mp4", autoplay, loop) 
+
+      .container
+        .row
+          .col-sm-8.col-sm-offset-2
+            form.form.contact-form(action="/", method="POST")
+              .row
+                .col-sm-12
+                  h3.align-right Contact Me!
+              .row
+                .form-group.col-sm-12
+                  label.control-label(for="name") Name
+                  input.form-control(name="name")
+              .row
+                .form-group.col-sm-6
+                  label.control-label(for="email") Email
+                  input.form-control(name="email")
+                .form-group.col-sm-6
+                  label.control-label(for="phone") Phone
+                  input.form-control(name="phone")
+              .row
+                .form-group.col-sm-12
+                  label.control-label(for="about") About Your Event
+                  textarea.form-control(name="about")
+              .row
+                .form-group.col-sm-3
+                  input.form-control.btn.btn-submit(type="submit")
 
   #about-me.about-me
     .container
