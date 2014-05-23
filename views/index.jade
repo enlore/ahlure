@@ -29,7 +29,6 @@ block body
           li: a(href="#about-me") About Me
 
   #content.content
-    //h1.deck Welcome!
     img.deck(src="/img/welcome.png")
 
     .container
@@ -64,21 +63,9 @@ block body
           h2.align-center (931) 334-1009!
           h3.align-center info@ahlure.net
 
-
-    //
-      .row.hidden-xs
-        .col-md-12
-          h2.align-center Media from parties I've thrown:
-
-      .row.hidden-xs
-        .col-md-12.col-lg-6
-          iframe.center-block(width="530",height="315",src="//www.youtube.com/embed/SqrgKc5hgYs",frameborder="0",allowfullscreen)
-        .col-lg-6.hidden-md.hidden-sm
-          iframe.center-block(width="530",height="315",src="//www.youtube.com/embed/fPc-X2zpRxM",frameborder="0",allowfullscreen)
-
-  #contact-me.contact()
+  #contact-me.contact
     .video-bg
-      video.boom-vid(src="/vid/boom.mp4", autoplay, loop) 
+      video.boom-vid(src="/vid/boom.mp4", autoplay, loop, muted) 
 
       .container
         .row
