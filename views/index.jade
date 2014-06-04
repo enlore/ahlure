@@ -72,7 +72,9 @@ block body
       .container
         .row
           .col-sm-8.col-sm-offset-2
-            form.form.contact-form(action="/", method="POST")
+            form#contact-form.form.contact-form(action="/", method="POST")
+              input.hush(type="text", name="hush")
+
               .row
                 .col-sm-12
                   h3.align-right Contact Me!
