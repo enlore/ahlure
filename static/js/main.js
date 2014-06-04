@@ -7,10 +7,10 @@ $(document).ready(function () {
 
     function validateRequiredField(fieldName) {
         var messages = {
-            name: "Please tell me who you are.",
-            phone: "Please give me your number and area code.",
-            email: "Please include your email.",
-            about: "Can you tell me a little about your event?"
+            name: "A name is required for submission.",
+            phone: "A 10-digit phone number is required for submission.",
+            email: "An email address is required for submission.",
+            about: "Please give a brief description about the event you need service for!"
         }
 
         var $field = $form.find('[name="' + fieldName + '"]')
