@@ -26,7 +26,7 @@ app.use(express.cookieParser('a;sldkfja;oiwefj;a'));
 app.use(express.session({ cookie: { maxAge: 60000 }}));
 app.use(flash())
 app.use(app.router);
-app.use(require('less-middleware')({ src: path.join(__dirname, 'static') }));
+//app.use(require('less-middleware')({ src: path.join(__dirname, 'static') }));
 app.use(express.static(path.join(__dirname, 'static')));
 
 
